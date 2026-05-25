@@ -1,0 +1,33 @@
+.result {
+  &Slide {
+    transition: opacity .2s linear;
+
+    &:hover {
+      opacity: .85;
+    }
+
+    img {
+      height: 330px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+    }
+  }
+}
+
+.resultThumbSlide {
+  transition: opacity .2s linear;
+
+  &:hover {
+    opacity: .85;
+  }
+
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 130px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+}

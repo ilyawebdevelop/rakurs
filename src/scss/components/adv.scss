@@ -1,0 +1,20 @@
+.adv {
+  &Card {
+    &Icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #f4f1e4;
+      border-radius: 15px;
+      padding: 10px;
+      &--border-none {
+        border: 1px solid transparent;        
+      }
+      &--bg-milk {
+        background-color: rgba($color: #F4F1E4, $alpha: .4);
+      }
+    }
+    &.min-h-300 {
+      min-height: 300px;
+    }
+  }
+}

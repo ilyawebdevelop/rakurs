@@ -1,0 +1,23 @@
+.aioseo-breadcrumbs {
+  font-size: 16px;
+  color: #a0a0a0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 6px;
+  -moz-column-gap: 6px;
+  column-gap: 6px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.aioseo-breadcrumbs a {
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  color: #2d2d2d;
+}
+
+.aioseo-breadcrumbs a:hover {
+  color: #2d2d2d;
+}

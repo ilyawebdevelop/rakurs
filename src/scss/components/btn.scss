@@ -1,0 +1,177 @@
+// btn
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  transition: background-color .2s linear, color .2s linear;
+  column-gap: 14px;
+  border-radius: 15px;
+  font-size: 16px;
+  height: 58px;
+  padding-left: 24px;
+  padding-right: 24px;
+  cursor: pointer;
+
+  &--sm {
+    height: 35px;
+  }
+
+  &--md {
+    height: 40px;
+  }
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &--green {
+    background-color: var(--green);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--main-color);
+    }
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &--milk {
+    background-color: var(--milk);
+    color: #5b5b5b;
+
+    svg {
+      stroke: transparent;
+      fill: #505050;
+    }
+
+    &:hover {
+      background-color: var(--green);
+      color: #fff;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  &--black {
+    background-color: #2d2d2d;
+    color: #fff;
+
+    svg {
+      stroke: transparent;
+      fill: #fff;
+    }
+
+    &:hover {
+      background-color: var(--green);
+    }
+  }
+
+  &--black-border-white {
+    background-color: #2d2d2d;
+    color: #fff;
+    border: 1px solid #a1ad92;
+
+    svg {
+      stroke: transparent;
+      fill: #fff;
+    }
+
+    &:hover {
+      background-color: #a1ad92;
+    }
+  }
+
+  &--transparent-border-black {
+    background-color: transparent;
+    border: 1px solid #2d2d2d;
+
+    &:hover {
+      color: #fff;
+      background-color: #2d2d2d;
+
+      svg {
+        fill: #fff;
+      }
+
+    }
+  }
+
+  &--green-20 {
+    background-color: rgba(161, 173, 146, 0.2);
+    color: #797979;
+  }
+
+  &.fz-12 {
+    font-size: 12px;
+    line-height: 115%;
+  }
+  &.fz-14 {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &.rounded-10 {
+    border-radius: 10px;
+  }
+
+  &.px-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &.px-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &.px-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &.gap-5 {
+    gap: 5px;
+  }
+
+  &.h-45 {
+    height: 45px;
+  }
+
+  &.pe-none {
+    pointer-events: none;
+  }
+}
+
+.round-btn {
+  flex-shrink: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 48px;
+  height: 48px;
+
+  &.bg--green {
+    background-color: var(--green);
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &.bg--milk {
+    background: #f4f1e4;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+}
+
+.footerBtn {
+  height: 50px;
+  width: 220px;
+}

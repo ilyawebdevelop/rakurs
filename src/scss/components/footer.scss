@@ -1,0 +1,97 @@
+// Footer
+.footer {
+  &W {
+    background-color: #a1ad92;
+    padding: 40px 40px 16px 40px;
+    border-radius: 35px;
+  }
+
+  &T {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+    width: 100%;
+
+    &L {
+      display: flex;
+      column-gap: 50px;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &Form {
+    width: 745px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-color: #f4f1e4;
+    padding: 48px 40px;
+    display: flex;
+    column-gap: 55px;
+
+    &R {
+      width: 100%;
+    }
+
+    &Title {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 88%;
+      font-family: var(--font-family-second);
+    }
+  }
+
+  &Logo {
+    display: block;
+    &:hover {
+      opacity: .85;
+    }
+
+    img {
+      width: 135px;
+    }
+  }
+
+  .socials {
+    ul {
+      li {
+        a {
+          width: 33px;
+          height: 33px;
+        }
+      }
+    }
+  }
+  .develop {
+    &:hover {
+      opacity: .85;
+    }
+  }
+}
+
+.footerNavTitle {
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 80%;
+  color: #fff;
+  font-family: var(--font-family-second);
+}
+
+.footerNav {
+  ul {
+    li {
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+      a {
+        font-size: 20px;
+        line-height: 125%;
+        color: #fff;
+        &:hover {
+          color: var(--milk);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+// Header
+.header {
+  position: fixed;
+  top: 12px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+
+  &W {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 45px;
+    padding-right: 40px;
+    background-color: #fff;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 65px;
+  }
+
+  &Logo {
+    &:hover {
+      opacity: .85;
+    }
+
+    img {
+      width: 131px;
+    }
+  }
+
+  &Nav {
+    &>ul {
+      display: flex;
+      column-gap: 30px;
+
+      &>li {
+        &.menu-item-has-children {
+          &>a {
+            padding-right: 16px;
+            background: url('@img/icons/arrow-down.svg') no-repeat right top 7px / 16px;
+            transition: background .2s linear, color .2s linear;
+
+            &:hover {
+              background: url('@img/icons/arrow-up-green.svg') no-repeat right top 7px / 16px;
+            }
+          }
+        }
+
+        &>a {
+          font-size: 16px;
+          line-height: 130%;
+
+          &:hover {
+            color: #a1ad92;
+          }
+        }
+      }
+    }
+  }
+
+  &Contacts {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+  }
+
+  &Phone {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 156%;
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+}
