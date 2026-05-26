@@ -147,6 +147,10 @@
     gap: 5px;
   }
 
+  &.h-40 {
+    height: 40px;
+  }
+
   &.h-45 {
     height: 45px;
   }
@@ -184,4 +188,17 @@
 .footerBtn {
   height: 50px;
   width: 220px;
+}
+
+.accordItemHeadBtn {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a1ad92;
+  img {
+    transition: transform .2s linear;
+  }
 }

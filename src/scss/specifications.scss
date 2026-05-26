@@ -285,15 +285,28 @@ h3,
   width: fit-content;
 }
 
+.w-450 {
+  width: 450px;
+}
+
 .w-520 {
   width: 520px;
+}
+
+.h-370 {
+  height: 370px;
 }
 
 .h-410 {
   height: 410px;
 }
+
 .h-530 {
   height: 530px;
+}
+
+.h-640 {
+  height: 640px;
 }
 
 .min-h-560 {
@@ -387,6 +400,7 @@ h3,
       fill: #fff;
     }
   }
+
   &--white {
 
     svg {
@@ -414,6 +428,7 @@ h3,
   font-size: 16px;
   line-height: 21px;
 }
+
 .fz-18 {
   font-size: 18px;
   line-height: 139%;
@@ -506,10 +521,12 @@ a.color--milk {
   padding-top: 3px;
   padding-bottom: 3px;
 }
+
 .py-8 {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+
 .py-12 {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -527,9 +544,11 @@ a.color--milk {
 .pt-20 {
   padding-top: 20px;
 }
+
 .pt-40 {
   padding-top: 40px;
 }
+
 .pt-50 {
   padding-top: 50px;
 }
@@ -560,9 +579,14 @@ a.color--milk {
   padding-left: 20px;
 }
 
+.mt-15 {
+  margin-top: 15px;
+}
+
 .mt-25 {
   margin-top: 25px;
 }
+
 .mt-40 {
   margin-top: 40px;
 }
@@ -570,6 +594,7 @@ a.color--milk {
 .mb-7 {
   margin-bottom: 7px;
 }
+
 .mb-8 {
   margin-bottom: 8px;
 }
@@ -601,6 +626,7 @@ a.color--milk {
 .mb-40 {
   margin-bottom: 40px;
 }
+
 .mb-45 {
   margin-bottom: 45px;
 }
@@ -620,9 +646,11 @@ a.color--milk {
 .mb-130 {
   margin-bottom: 130px;
 }
+
 .ml-5 {
   margin-left: 5px;
 }
+
 .ml-auto {
   margin-left: auto;
 }
@@ -634,6 +662,10 @@ a.color--milk {
 
 .max-w-290 {
   max-width: 290px;
+}
+
+.max-w-350 {
+  max-width: 350px;
 }
 
 .max-w-420 {
@@ -655,9 +687,11 @@ a.color--milk {
 .max-w-480 {
   max-width: 480px;
 }
+
 .max-w-510 {
   max-width: 510px;
 }
+
 .max-w-530 {
   max-width: 530px;
 }
@@ -676,6 +710,10 @@ a.color--milk {
 
 .max-w-670 {
   max-width: 670px;
+}
+
+.max-w-700 {
+  max-width: 700px;
 }
 
 .max-w-830 {
@@ -755,8 +793,9 @@ a.color--milk {
   &.color--black {
     border-left: 2px solid #a1ad92;
   }
+
   p {
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 10px;
     }
   }
@@ -856,4 +895,33 @@ a.color--milk {
       }
     }
   }
+}
+
+.accordItem {
+  padding: 20px 40px 20px 20px;
+  border-radius: 20px;
+  background: #fff;
+}
+.accordItemHead {
+  cursor: pointer;
+  
+  &.active {
+    .accordItemHeadBtn {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.accordItemHeadTitle {
+  font-weight: 500;
+  line-height: 105%;
+}
+.accordItemBody {
+  padding-top: 10px;
+}
+.accordItemDescr {
+  font-size: 16px;
+  line-height: 131%;
 }

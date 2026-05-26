@@ -192,3 +192,8 @@ function map() {
 }
 
 map();
+
+$('.accordItemHead').click(function () {
+  $(this).toggleClass('active');
+  $(this).siblings('.accordItemBody').slideToggle();
+});

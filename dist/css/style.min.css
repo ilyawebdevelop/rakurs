@@ -2479,8 +2479,16 @@ h3,
   width: fit-content;
 }
 
+.w-450 {
+  width: 450px;
+}
+
 .w-520 {
   width: 520px;
+}
+
+.h-370 {
+  height: 370px;
 }
 
 .h-410 {
@@ -2489,6 +2497,10 @@ h3,
 
 .h-530 {
   height: 530px;
+}
+
+.h-640 {
+  height: 640px;
 }
 
 .min-h-560 {
@@ -2734,6 +2746,10 @@ a.color--milk:hover {
   padding-left: 20px;
 }
 
+.mt-15 {
+  margin-top: 15px;
+}
+
 .mt-25 {
   margin-top: 25px;
 }
@@ -2815,6 +2831,10 @@ a.color--milk:hover {
   max-width: 290px;
 }
 
+.max-w-350 {
+  max-width: 350px;
+}
+
 .max-w-420 {
   max-width: 420px;
 }
@@ -2857,6 +2877,10 @@ a.color--milk:hover {
 
 .max-w-670 {
   max-width: 670px;
+}
+
+.max-w-700 {
+  max-width: 700px;
 }
 
 .max-w-830 {
@@ -3008,6 +3032,33 @@ a.color--milk:hover {
   background-color: var(--green);
 }
 
+.accordItem {
+  padding: 20px 40px 20px 20px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.accordItemHead {
+  cursor: pointer;
+}
+.accordItemHead.active .accordItemHeadBtn img {
+  transform: rotate(180deg);
+}
+
+.accordItemHeadTitle {
+  font-weight: 500;
+  line-height: 105%;
+}
+
+.accordItemBody {
+  padding-top: 10px;
+}
+
+.accordItemDescr {
+  font-size: 16px;
+  line-height: 131%;
+}
+
 .aioseo-breadcrumbs {
   font-size: 16px;
   color: #a0a0a0;
@@ -3065,6 +3116,9 @@ a.color--milk:hover {
 .grid-cols-2 .col {
   grid-column: 6 span;
 }
+.grid-cols-2 .col-full {
+  grid-column: 12 span;
+}
 
 .grid-cols-4 {
   grid-template-columns: repeat(12, 1fr);
@@ -3095,6 +3149,10 @@ a.color--milk:hover {
 
 .gap-30 {
   gap: 30px;
+}
+
+.gap-35 {
+  gap: 35px;
 }
 
 .gap-60 {
@@ -3247,6 +3305,9 @@ a.color--milk:hover {
 .button.gap-5 {
   gap: 5px;
 }
+.button.h-40 {
+  height: 40px;
+}
 .button.h-45 {
   height: 45px;
 }
@@ -3277,6 +3338,19 @@ a.color--milk:hover {
 .footerBtn {
   height: 50px;
   width: 220px;
+}
+
+.accordItemHeadBtn {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a1ad92;
+}
+.accordItemHeadBtn img {
+  transition: transform 0.2s linear;
 }
 
 /* Hamburger Menu */
@@ -3824,6 +3898,29 @@ a.color--milk:hover {
 
 .star.empty {
   color: #e0e0e0; /* Серый цвет для пустых */
+}
+
+.whyCard {
+  background: rgba(161, 173, 146, 0.4);
+  border-radius: 20px;
+  color: #fff;
+  padding: 25px 10px 25px 20px;
+  height: 100%;
+  border: 1px solid var(--milk);
+}
+.whyCardTitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 117%;
+  margin-bottom: 5px;
+}
+.whyCardDescr {
+  font-size: 16px;
+  line-height: 131%;
+}
+
+.when .h2 span {
+  color: var(--green);
 }
 
 .footerW {

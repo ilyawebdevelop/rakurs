@@ -24,6 +24,9 @@
   .col {
     grid-column: 6 span;
   }
+  .col-full {
+    grid-column: 12 span;
+  }
 }
 
 .grid-cols-4 {
@@ -57,7 +60,9 @@
 .gap-30 {
   gap: 30px;
 }
-
+.gap-35 {
+  gap: 35px;
+}
 .gap-60 {
   gap: 60px;
 }
