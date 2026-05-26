@@ -21,3 +21,11 @@
 .aioseo-breadcrumbs a:hover {
   color: #2d2d2d;
 }
+.breadcrumbs--white{
+  .aioseo-breadcrumbs a {
+    color: #fff;
+    &:hover {
+      color: var(--green);
+    }
+  }
+}

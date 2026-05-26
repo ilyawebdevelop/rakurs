@@ -1,0 +1,28 @@
+.portfolioSlide {
+  color: #fff;
+  background: rgba(161, 173, 146, 0.4);
+  border-radius: 20px;
+  padding: 20px;
+  height: auto;
+  &Title {
+    line-height: 105%;
+  }
+  &Img {
+    display: block;  
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+  &>a {
+    display: block;
+    margin-bottom: 10px;
+    &:hover {
+      opacity: .85;
+    }
+  }
+}

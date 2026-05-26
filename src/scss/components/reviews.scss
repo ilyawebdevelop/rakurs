@@ -1,0 +1,45 @@
+.reviewsLogo {
+  width: 335px;
+}
+
+.reviews-mark {
+  font-family: var(--font-family-third);
+}
+
+.reviews-stars-icon {
+  width: 115px;
+}
+
+.reviewsSlide {
+  border-radius: 25px;
+  padding: 35px 25px 30px;
+  background: #fff;
+  &Title {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  &Descr {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  &Stars {
+    margin-bottom: 10px;
+  }
+}
+.star-rating {
+  display: flex;
+  gap: 3px; /* Расстояние между звездами */
+}
+
+.star {
+  font-size: 16px; /* Размер звезды */
+  line-height: 16px;
+}
+
+.star.filled {
+  color: #ffcc00; /* Золотой цвет для активных */
+}
+
+.star.empty {
+  color: #e0e0e0; /* Серый цвет для пустых */
+}

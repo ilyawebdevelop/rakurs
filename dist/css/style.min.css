@@ -2487,6 +2487,10 @@ h3,
   height: 410px;
 }
 
+.h-530 {
+  height: 530px;
+}
+
 .min-h-560 {
   min-height: 560px;
 }
@@ -2531,7 +2535,7 @@ h3,
 
 .navArrow {
   border-radius: 10px;
-  background-color: rgba(161, 173, 146, 0.4);
+  background-color: rgb(161, 173, 146);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2546,7 +2550,7 @@ h3,
   transition: none;
 }
 .navArrow:hover {
-  background-color: rgb(161, 173, 146);
+  background-color: rgba(161, 173, 146, 0.8);
 }
 .navArrow:hover svg {
   fill: #fff;
@@ -2561,6 +2565,9 @@ h3,
   fill: #2d2d2d;
 }
 .navArrow--green svg {
+  fill: #fff;
+}
+.navArrow--white svg {
   fill: #fff;
 }
 .navArrow.swiper-button-disabled {
@@ -2581,6 +2588,11 @@ h3,
 .fz-16 {
   font-size: 16px;
   line-height: 21px;
+}
+
+.fz-18 {
+  font-size: 18px;
+  line-height: 139%;
 }
 
 .fz-25 {
@@ -2665,6 +2677,11 @@ a.color--milk:hover {
   padding-bottom: 3px;
 }
 
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .py-12 {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -2683,8 +2700,20 @@ a.color--milk:hover {
   padding-top: 20px;
 }
 
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
 .pb-30 {
   padding-bottom: 30px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
 }
 
 .px-20 {
@@ -2709,8 +2738,16 @@ a.color--milk:hover {
   margin-top: 25px;
 }
 
+.mt-40 {
+  margin-top: 40px;
+}
+
 .mb-7 {
   margin-bottom: 7px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
 }
 
 .mb-10 {
@@ -2741,6 +2778,10 @@ a.color--milk:hover {
   margin-bottom: 40px;
 }
 
+.mb-45 {
+  margin-bottom: 45px;
+}
+
 .mb-50 {
   margin-bottom: 50px;
 }
@@ -2755,6 +2796,10 @@ a.color--milk:hover {
 
 .mb-130 {
   margin-bottom: 130px;
+}
+
+.ml-5 {
+  margin-left: 5px;
 }
 
 .ml-auto {
@@ -2790,6 +2835,10 @@ a.color--milk:hover {
   max-width: 480px;
 }
 
+.max-w-510 {
+  max-width: 510px;
+}
+
 .max-w-530 {
   max-width: 530px;
 }
@@ -2808,6 +2857,10 @@ a.color--milk:hover {
 
 .max-w-670 {
   max-width: 670px;
+}
+
+.max-w-830 {
+  max-width: 830px;
 }
 
 .text-center {
@@ -2873,6 +2926,12 @@ a.color--milk:hover {
 .bloquote.color--white {
   border-left: 2px solid #f4f1e4;
 }
+.bloquote.color--black {
+  border-left: 2px solid #a1ad92;
+}
+.bloquote p:not(:last-child) {
+  margin-bottom: 10px;
+}
 
 .bg-blur-5 {
   backdrop-filter: blur(5px);
@@ -2924,6 +2983,31 @@ a.color--milk:hover {
   color: var(--green);
 }
 
+.nav-standart ul {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.nav-standart ul li.active a {
+  background-color: var(--green);
+}
+.nav-standart ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(161, 173, 146, 0.4);
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: fit-content;
+  border: 1px solid var(--green);
+  font-size: 12px;
+  line-height: 175%;
+  color: #fff;
+}
+.nav-standart ul li a:hover {
+  background-color: var(--green);
+}
+
 .aioseo-breadcrumbs {
   font-size: 16px;
   color: #a0a0a0;
@@ -2946,6 +3030,13 @@ a.color--milk:hover {
 
 .aioseo-breadcrumbs a:hover {
   color: #2d2d2d;
+}
+
+.breadcrumbs--white .aioseo-breadcrumbs a {
+  color: #fff;
+}
+.breadcrumbs--white .aioseo-breadcrumbs a:hover {
+  color: var(--green);
 }
 
 .d-block {
@@ -2998,12 +3089,12 @@ a.color--milk:hover {
   gap: 20px;
 }
 
-.gap-30 {
-  gap: 30px;
-}
-
 .gap-25 {
   gap: 25px;
+}
+
+.gap-30 {
+  gap: 30px;
 }
 
 .gap-60 {
@@ -3132,8 +3223,14 @@ a.color--milk:hover {
   font-size: 14px;
   line-height: 150%;
 }
+.button.fz-15 {
+  font-size: 15px;
+}
 .button.rounded-10 {
   border-radius: 10px;
+}
+.button.rounded-30 {
+  border-radius: 30px;
 }
 .button.px-10 {
   padding-left: 10px;
@@ -3360,6 +3457,9 @@ a.color--milk:hover {
 .intro .breadcrumbs {
   margin-bottom: 100px;
 }
+.intro .breadcrumbs.mb-40 {
+  margin-bottom: 40px;
+}
 
 .introAdvItem {
   background: rgba(244, 241, 228, 0.4);
@@ -3510,26 +3610,36 @@ a.color--milk:hover {
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
+.teamSlideTop {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+}
 .teamSlideExp {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
   background: rgba(161, 173, 146, 0.4);
   border-radius: 20px;
   padding: 5px 10px;
   width: fit-content;
-  border: 1px solid #fff;
+  border: 1px solid var(--milk);
   font-size: 10px;
   line-height: 150%;
   color: #fff;
   position: relative;
   z-index: 1;
 }
+.teamSlideExp--green {
+  background: #a1ad92;
+  border: 1px solid #a1ad92;
+}
+.teamSlideExpW {
+  display: flex;
+  column-gap: 5px;
+}
 .teamSlideContent {
   background: rgba(161, 173, 146, 0.4);
   border-radius: 20px;
   padding: 12px 20px;
-  border: 1px solid #fff;
+  border: 1px solid var(--milk);
   position: relative;
   z-index: 1;
   backdrop-filter: blur(3px);
@@ -3543,6 +3653,10 @@ a.color--milk:hover {
   line-height: 92%;
   color: #f4f1e4;
   max-width: 160px;
+}
+
+.d-grid .teamSlide {
+  width: 100%;
 }
 
 .resultSlide {
@@ -3618,6 +3732,98 @@ a.color--milk:hover {
   height: 560px;
   object-fit: cover;
   border-radius: 35px;
+}
+
+.certSlider {
+  overflow: visible;
+  padding-right: 100px;
+}
+.certSlide {
+  transition: opacity 0.2s linear;
+}
+.certSlide:hover {
+  opacity: 0.85;
+}
+.certSlide img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.portfolioSlide {
+  color: #fff;
+  background: rgba(161, 173, 146, 0.4);
+  border-radius: 20px;
+  padding: 20px;
+  height: auto;
+}
+.portfolioSlideTitle {
+  line-height: 105%;
+}
+.portfolioSlideImg {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.portfolioSlide strong {
+  font-weight: 500;
+}
+.portfolioSlide > a {
+  display: block;
+  margin-bottom: 10px;
+}
+.portfolioSlide > a:hover {
+  opacity: 0.85;
+}
+
+.reviewsLogo {
+  width: 335px;
+}
+
+.reviews-mark {
+  font-family: var(--font-family-third);
+}
+
+.reviews-stars-icon {
+  width: 115px;
+}
+
+.reviewsSlide {
+  border-radius: 25px;
+  padding: 35px 25px 30px;
+  background: #fff;
+}
+.reviewsSlideTitle {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.reviewsSlideDescr {
+  font-size: 15px;
+  line-height: 140%;
+}
+.reviewsSlideStars {
+  margin-bottom: 10px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 3px; /* Расстояние между звездами */
+}
+
+.star {
+  font-size: 16px; /* Размер звезды */
+  line-height: 16px;
+}
+
+.star.filled {
+  color: #ffcc00; /* Золотой цвет для активных */
+}
+
+.star.empty {
+  color: #e0e0e0; /* Серый цвет для пустых */
 }
 
 .footerW {

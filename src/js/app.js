@@ -118,6 +118,57 @@ var mySwiperGal = new Swiper(galSlider, {
   },
 });
 
+// Инициализация слайдера certSlider
+const certSlider = document.querySelector('.certSlider');
+var mySwiperCert = new Swiper(certSlider, {
+  slidesPerView: 2,
+  speed: 600,
+  spaceBetween: 10,
+  // autoHeight: 'true',
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false, // Не останавливать после клика
+  },
+  navigation: {
+    prevEl: certSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
+    nextEl: certSlider?.closest('.sliderW').querySelector('.navArrowNext'),
+  },
+});
+
+// Инициализация слайдера portfolioSlider
+const portfolioSlider = document.querySelector('.portfolioSlider');
+var mySwiperPortfolio = new Swiper(portfolioSlider, {
+  slidesPerView: 3,
+  speed: 600,
+  spaceBetween: 20,
+  // autoHeight: 'true',
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false, // Не останавливать после клика
+  },
+  navigation: {
+    prevEl: portfolioSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
+    nextEl: portfolioSlider?.closest('.sliderW').querySelector('.navArrowNext'),
+  },
+});
+
+// Инициализация слайдера reviewsSlider
+const reviewsSlider = document.querySelector('.reviewsSlider');
+var mySwiperReviews = new Swiper(reviewsSlider, {
+  slidesPerView: 3,
+  speed: 600,
+  spaceBetween: 20,
+  // autoHeight: 'true',
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false, // Не останавливать после клика
+  },
+  navigation: {
+    prevEl: reviewsSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
+    nextEl: reviewsSlider?.closest('.sliderW').querySelector('.navArrowNext'),
+  },
+});
+
 function map() {
   const contactsMap = document.querySelector(".maps__map");
   if (contactsMap) {
@@ -127,14 +178,14 @@ function map() {
       const htmlMap = new ymaps.Map(contactsMap, {
         center,
         zoom
-      });    
+      });
       htmlMap.controls.remove("geolocationControl");
       htmlMap.controls.remove("searchControl");
       htmlMap.controls.remove("trafficControl");
       htmlMap.controls.remove("typeSelector");
       htmlMap.controls.remove("fullscreenControl");
       htmlMap.controls.remove("rulerControl");
-      htmlMap.behaviors.disable(["scrollZoom"]);     
+      htmlMap.behaviors.disable(["scrollZoom"]);
     }
     ymaps.ready(init);
   }
