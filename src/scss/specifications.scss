@@ -125,6 +125,15 @@ section {
   position: relative;
   background-color: #f4f1e4;
   padding-top: 117px;
+  padding-bottom: 40px;
+
+  @media(max-width: 1199px) {
+    padding-top: 85px;
+  }
+
+  @media(max-width: 991px) {
+    padding-bottom: 24px;
+  }
 }
 
 .main {
@@ -141,13 +150,13 @@ section {
   // margin: 0 auto;
 
   @media (max-width: 575px) {
-    padding: 0 12px;
+    padding: 0 20px;
   }
 }
 
 
 .container {
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 @media (min-width: 575.98px) {
@@ -172,7 +181,7 @@ section {
 
 @media (min-width: 1199.98px) {
   .container {
-    max-width: 1140px;
+    max-width: 1170px;
   }
 }
 
@@ -234,6 +243,11 @@ h1,
     }
   }
 
+  @media(max-width: 1500px) {
+    font-size: 44px;
+    line-height: 54px;
+  }
+
   @media(max-width: 1199px) {
     font-size: 30px;
     line-height: 35px;
@@ -241,6 +255,12 @@ h1,
 
   span {
     color: var(--green);
+  }
+
+  &.h1--content {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 145%;
   }
 }
 
@@ -267,6 +287,11 @@ h3,
 .h3 {
   font-size: 30px;
   line-height: 80%;
+
+  @media(max-width: 1400px) {
+    font-size: 20px;
+    line-height: 100%;
+  }
 
   @media (max-width: 1199px) {
     font-size: 16px;
@@ -312,7 +337,11 @@ h3,
 .min-h-560 {
   min-height: 560px;
 }
-
+.min-h-lg-340 {
+  @media(max-width: 991px){
+    min-height: 340px;
+  }
+}
 .underline {
   text-decoration: underline;
 }
@@ -348,15 +377,47 @@ h3,
   }
 
   &>ul {
-    margin-top: 15px;
     margin-bottom: 15px;
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 30px;
   }
 
   &>a {
     display: inline;
     border-bottom: 1px solid #000;
+  }
+}
+
+.content-page {
+  font-size: 16px;
+  line-height: 181%;
+
+  h2 {
+    font-size: 16px;
+    line-height: 181%;
+    font-weight: 500;
+    font-family: var(--font-family);
+    margin-bottom: 20px;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  &>ul {
+    margin-bottom: 15px;
+    list-style-type: disc;
+    padding-left: 30px;
+  }
+
+  &>a,
+  a {
+    display: inline;
+    border-bottom: 1px solid var(--main-color);
   }
 }
 
@@ -374,7 +435,7 @@ h3,
     fill: #000;
     width: 26px;
     height: 26px;
-    transition: none;
+    transition: fill .2s linear;
   }
 
   &:hover {
@@ -424,9 +485,28 @@ h3,
   line-height: normal;
 }
 
+.fz-15 {
+  font-size: 15px;
+  line-height: 21px;
+}
+
 .fz-16 {
   font-size: 16px;
   line-height: 21px;
+
+  &.fz-lg-10 {
+    @media(max-width: 991px) {
+      font-size: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &.fz-lg-14 {
+    @media(max-width: 991px) {
+      font-size: 14px;
+      line-height: 100%;
+    }
+  }
 }
 
 .fz-18 {
@@ -445,6 +525,11 @@ h3,
 
 .rounded-20 {
   border-radius: 20px;
+  &.rounded-lg-12 {
+    @media(max-width: 991px){
+      border-radius: 12px;
+    }
+  }
 }
 
 .rounded-22 {
@@ -453,6 +538,11 @@ h3,
 
 .rounded-35 {
   border-radius: 35px;
+  &.rounded-xl-22 {
+    @media(max-width: 1199px){
+      border-radius: 22px;
+    }
+  }
 }
 
 .bg--white {
@@ -507,6 +597,11 @@ a.color--milk {
 
 .p-20 {
   padding: 20px;
+  &.p-lg-10 {
+    @media(max-width: 991px){
+      padding: 10px;
+    }
+  }
 }
 
 .p-30 {
@@ -535,6 +630,12 @@ a.color--milk {
 .py-70 {
   padding-top: 70px;
   padding-bottom: 70px;
+  &.py-lg-30 {
+    @media(max-width: 991px){
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
 }
 
 .pt-15 {
@@ -569,6 +670,12 @@ a.color--milk {
 .px-40 {
   padding-left: 40px;
   padding-right: 40px;
+  &.px-lg-20 {
+    @media(max-width: 991px){
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 }
 
 .pl-10 {
@@ -577,6 +684,10 @@ a.color--milk {
 
 .pl-20 {
   padding-left: 20px;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .mt-15 {
@@ -589,6 +700,10 @@ a.color--milk {
 
 .mt-40 {
   margin-top: 40px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
 }
 
 .mb-7 {
@@ -605,22 +720,49 @@ a.color--milk {
 
 .mb-15 {
   margin-bottom: 15px;
+
+  &.mb-lg-10 {
+    @media(max-width: 991px) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .mb-20 {
   margin-bottom: 20px;
 }
 
+.mb-24 {
+  margin-bottom: 24px;
+}
+
 .mb-25 {
   margin-bottom: 25px;
+
+  &.mb-lg-15 {
+    @media(max-width: 991px) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .mb-30 {
   margin-bottom: 30px;
+
+  &.mb-lg-20 {
+    @media(max-width: 991px) {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .mb-35 {
   margin-bottom: 35px;
+  &.mb-lg-25 {
+    @media(max-width: 991px){
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .mb-40 {
@@ -633,14 +775,32 @@ a.color--milk {
 
 .mb-50 {
   margin-bottom: 50px;
+
+  &.mb-lg-30 {
+    @media(max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .mb-60 {
   margin-bottom: 60px;
+
+  &.mb-lg-25 {
+    @media(max-width: 991px) {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .mb-70 {
   margin-bottom: 70px;
+
+  &.mb-lg-30 {
+    @media(max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .mb-130 {
@@ -666,6 +826,10 @@ a.color--milk {
 
 .max-w-350 {
   max-width: 350px;
+}
+
+.max-w-390 {
+  max-width: 390px;
 }
 
 .max-w-420 {
@@ -729,14 +893,27 @@ a.color--milk {
 }
 
 .people-round {
+  flex-shrink: 0;
+
   &-item {
     width: 48px;
     height: 48px;
     object-fit: cover;
     border-radius: 50%;
 
+    @media(max-width: 991px) {
+      width: 34px;
+      height: 34px;
+    }
+
     &:not(:last-child) {
       margin-right: -20px;
+    }
+  }
+
+  &-descr {
+    @media(max-width: 991px) {
+      max-width: 160px;
     }
   }
 }
@@ -895,6 +1072,23 @@ a.color--milk {
       }
     }
   }
+
+  &.nav--white {
+    ul {
+      li {
+        &.active {
+          a {
+            background-color: #fff;
+            color: var(--main-color);
+          }
+        }
+
+        a {
+          border: 1px solid rgba($color: #fff, $alpha: .5);
+        }
+      }
+    }
+  }
 }
 
 .accordItem {
@@ -902,9 +1096,10 @@ a.color--milk {
   border-radius: 20px;
   background: #fff;
 }
+
 .accordItemHead {
   cursor: pointer;
-  
+
   &.active {
     .accordItemHeadBtn {
       img {
@@ -918,10 +1113,16 @@ a.color--milk {
   font-weight: 500;
   line-height: 105%;
 }
+
 .accordItemBody {
   padding-top: 10px;
 }
+
 .accordItemDescr {
   font-size: 16px;
   line-height: 131%;
+}
+
+.accordItemHeadPrice {
+  font-weight: 500;
 }

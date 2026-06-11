@@ -21,9 +21,25 @@
 .aioseo-breadcrumbs a:hover {
   color: #2d2d2d;
 }
-.breadcrumbs--white{
+
+.breadcrumbs--white {
   .aioseo-breadcrumbs a {
     color: #fff;
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+}
+
+.breadcrumbs--green-bg {
+  .aioseo-breadcrumbs {
+    color: #DDDDDD;
+  }
+
+  .aioseo-breadcrumbs a {
+    color: #fff;
+
     &:hover {
       color: var(--green);
     }

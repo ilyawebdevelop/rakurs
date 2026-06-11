@@ -17,6 +17,7 @@
       padding-right: 10px;
       background: rgba(161, 173, 146, 0.4);
       transition: color .2s linear, background-color .2s linear;
+      border: 1px solid #D9DED3;
 
       &:hover {
         background-color: #a1ad92;
@@ -26,6 +27,7 @@
       &--active {
         background: #a1ad92;
         color: #fff;
+        border-color: #a1ad92;
       }
     }
   }

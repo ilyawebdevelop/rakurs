@@ -4,6 +4,10 @@
     background-color: #a1ad92;
     padding: 40px 40px 16px 40px;
     border-radius: 35px;
+    @media(max-width: 991px){
+      padding: 23px 20px;
+      border-radius: 22px;
+    }
   }
 
   &T {
@@ -12,11 +16,22 @@
     column-gap: 80px;
     width: 100%;
 
+    @media(max-width: 991px) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
     &L {
       display: flex;
       column-gap: 50px;
       justify-content: space-between;
       width: 100%;
+
+      @media(max-width: 1199px) {
+        column-gap: 30px;
+        flex-direction: column;
+        row-gap: 20px;
+      }
     }
   }
 
@@ -29,6 +44,23 @@
     display: flex;
     column-gap: 55px;
 
+    @media(max-width: 1400px) {
+      width: 634px;
+    }
+
+    @media(max-width: 1199px) {
+      width: 440px;
+      flex-direction: column;
+      row-gap: 15px;
+      padding: 32px;
+    }
+
+    @media(max-width: 991px) {
+      width: 100%;
+      padding: 30px 20px;
+      border-radius: 20px;
+    }
+
     &R {
       width: 100%;
     }
@@ -38,11 +70,22 @@
       font-size: 40px;
       line-height: 88%;
       font-family: var(--font-family-second);
+
+      @media(max-width: 1199px) {
+        font-size: 32px;
+      }
+
+      @media(max-width: 991px) {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 125%;
+      }
     }
   }
 
   &Logo {
     display: block;
+
     &:hover {
       opacity: .85;
     }
@@ -62,6 +105,7 @@
       }
     }
   }
+
   .develop {
     &:hover {
       opacity: .85;
@@ -76,18 +120,42 @@
   line-height: 80%;
   color: #fff;
   font-family: var(--font-family-second);
+
+  @media(max-width: 1199px) {
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
 }
 
 .footerNav {
   ul {
+    @media(max-width: 991px){
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 0;
+    }
     li {
-      &:not(:last-child){
-        margin-bottom: 20px;
+      @media(max-width: 991px){
+        grid-column: 6 span;
       }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @media(max-width: 1199px) {
+          margin-bottom: 10px;
+        }
+      }
+
       a {
         font-size: 20px;
         line-height: 125%;
         color: #fff;
+
+        @media(max-width: 1199px) {
+          font-size: 16px;
+        }
+
         &:hover {
           color: var(--milk);
         }

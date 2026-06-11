@@ -3,7 +3,8 @@
 <div class="modal" id="modalOrder">
 
   <div class="modalHead">
-    <h2 class="h2">Оставьте заявку</h2>
+    <h2 class="h2">Записаться
+      на&nbsp;консультацию</h2>
     <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24" tabindex="-1">
         <path d="M20 20L4 4m16 0L4 20"></path>
@@ -12,24 +13,46 @@
   </div>
 
   <div class="modalContent">
-    <p class="modalDescr">
-      Оставьте заявку на бесплатную консультацию и наши специалисты ответят на все Ваши вопросы
+    <p class="modalDescr fz-16 text-center mb-15" style="max-width: 330px;">
+      Оставьте свои контактные данные, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;самое ближайшее время!
     </p>
     <div class="modalForm">
       <div class="inputW">
-        <input type="text" class="formInput" placeholder="Как вас зовут?">
+        <input type="text" class="formInput border-green" placeholder="Имя и фамилия">
       </div>
       <div class="inputW">
-        <input type="tel" class="formInput" placeholder="+7 (___) ___-__-__" inputmode="text">
+        <input type="tel" class="formInput border-green" placeholder="Номер телефона">
       </div>
-      <button class="button button--blue formBtn">
-        Отправить заявку
+      <div class="agreement mb-15">
+        <input id="modalOrderAgree" type="checkbox">
+        <label class="d-flex gap-5" for="modalOrderAgree">
+          <div class="rect border-green"></div>
+          <div class="agreementText">
+            Я ознакомлен(а) и согласен(на) с условиями <a href="#">политики конфиденциальности</a> и <a
+              href="#">пользовательского соглашения</a>
+          </div>
+        </label>
+      </div>
+      <button class="button button--green w-100 formBtn">
+        Записаться
       </button>
-      <div class="agreement">
-        <p>
-          Нажимая кнопку выше, вы даёте согласие на обработку своих персональных данных.
-        </p>
-      </div>
+
     </div>
+  </div>
+</div>
+
+<!-- cookie -->
+<div class="cookie">
+  <div class="cookie__body d-flex align-items-center gap-30 gap-lg-15">
+    <p class="cookie__content fz-16 fz-lg-10">
+      Для обеспечения корректной работы сайта мы используем файлы cookie. Оставаясь на сайте, вы соглашаетесь
+      с <a href="#">политикой конфиденциальности</a>.
+    </p>
+    <div class="cookie__btn button button--transparent-border-green rounded-10 h-40 fz-lg-12">Согласен</div>
+    <button type="button" class="cookie__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" tabindex="-1">
+        <path d="M20 20L4 4m16 0L4 20"></path>
+      </svg>
+    </button>
   </div>
 </div>

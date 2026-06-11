@@ -1,17 +1,46 @@
 .intro {
+  @media(max-width: 1199px) {
+    padding-top: 0;
+  }
+
   &Serv {
     &Slider {
       overflow: visible;
       padding-right: 120px;
+
+      @media(max-width: 1400px) {
+        padding-right: 60px;
+      }
     }
 
     &Slide {
       background: rgba(161, 173, 146, 0.4);
+      border: 1px solid var(--milk);
+
+      &Title {
+        @media(max-width: 991px) {
+          font-weight: 500 !important;
+        }
+
+        &Descr {
+          @media(max-width: 991px) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .button {
+        @media(max-width: 991px) {
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
     }
   }
 
   .breadcrumbs {
     margin-bottom: 100px;
+
     &.mb-40 {
       margin-bottom: 40px;
     }

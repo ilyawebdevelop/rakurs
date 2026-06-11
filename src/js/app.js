@@ -28,7 +28,7 @@ var mySwiperIntroServ = new Swiper(introServSlider, {
     0: {
       slidesPerView: 1,
     },
-    576: {
+    1200: {
       slidesPerView: 2,
     },
   },
@@ -196,4 +196,123 @@ map();
 $('.accordItemHead').click(function () {
   $(this).toggleClass('active');
   $(this).siblings('.accordItemBody').slideToggle();
+});
+
+function handlerCookie() {
+  const item = document.querySelector(".cookie");
+  if (item) {
+    const btnClose = item.querySelector(".cookie__close");
+    const btnSubmit = item.querySelector(".cookie__btn");
+    btnClose.addEventListener("click", () => {
+      item.style.opacity = 0;
+      item.style.visibility = 'hidden';
+      setTimeout(() => {
+        item.remove();
+      }, 300);
+    });
+    btnSubmit.addEventListener("click", () => {
+      sessionStorage.setItem('_cookies-event-showed', 1);
+      item.style.opacity = 0;
+      item.style.visibility = 'hidden';
+      setTimeout(() => {
+        item.remove();
+      }, 300);
+    });
+  }
+
+  if (!sessionStorage.getItem('_cookies-event-showed')) {
+    item.style.opacity = 1;
+    item.style.visibility = 'visible';
+  }
+}
+
+handlerCookie();
+
+const mediaQueryMin1200 = window.matchMedia('(min-width: 1200px)');
+const mediaQueryMax1199 = window.matchMedia('(max-width: 1199px)');
+
+if (mediaQueryMin1200.matches) {
+
+  let subMenuTimer; // Таймер для скрытия подменю
+
+  $('.menu-item-has-children>a').on('mouseenter', function () {
+    // Очищаем таймер, если он был установлен (например, при быстром наведении с одного пункта на другой)
+    clearTimeout(subMenuTimer);
+
+    const $link = $(this);
+    const $subMenu = $('.headerServices'); // Находим подменю, которое идет сразу после .menu-link
+
+    // Проверяем, есть ли у этого .menu-link подменю
+    if ($subMenu.length) {
+      // Убираем класс 'is-visible' у ВСЕХ подменю, чтобы обновить состояние
+      // перед тем, как показать нужное. Это важно, если у вас несколько пунктов с подменю.
+      $('.headerServices').removeClass('active');
+      // Затем добавляем класс нужному подменю
+      $subMenu.addClass('active');
+    }
+  });
+
+  $('.menu-item-has-children>a').on('mouseleave', function () {
+    // При уходе с .menu-link, запускаем таймер для скрытия подменю
+    subMenuTimer = setTimeout(function () {
+      // Ищем ВСЕ подменю и скрываем их
+      // (вдруг пользователь ушел с пункта, но еще не зашел на подменю)
+      $('.headerServices').removeClass('active');
+    }, 1000); // 1000 миллисекунд = 1 секунда
+  });
+
+  // Важно: При наведении МЫШЬЮ на само подменю, таймер должен сбрасываться,
+  // чтобы подменю не исчезло, пока пользователь им пользуется.
+  $('.headerServices').on('mouseenter', function () {
+    clearTimeout(subMenuTimer); // Сбрасываем таймер
+  });
+
+  // При уходе с подменю, снова запускаем таймер для его скрытия.
+  // Это нужно, если пользователь "ушел" с подменю (например, нажал на ссылку внутри него).
+  $('.headerServices').on('mouseleave', function () {
+    subMenuTimer = setTimeout(function () {
+      $(this).removeClass('active'); // Скрываем подменю, с которого ушли
+    }.bind(this), 500); // Привязываем 'this' к самому .sub-menu
+  });
+
+}
+if (mediaQueryMax1199.matches) {
+  jQuery('.menu-item-has-children>a').click(function (event) {
+    event.preventDefault();
+    jQuery(this).toggleClass('active');
+    jQuery(this).siblings('.headerServices').slideToggle();
+  });
+}
+
+// Burger
+const btnMenu = document.querySelector('#toggle');
+const menu = document.querySelector('.headerNav');
+const btnClose = document.getElementById('headerNavMobileClose');
+let bodyEl = document.querySelector('body');
+
+const toggleMenu = function () {
+  menu.classList.toggle('active');
+}
+const toggleBurger = function () {
+  btnMenu.classList.toggle('active');
+}
+const bodyOverflow = function () {
+  bodyEl.classList.toggle('hidden');
+}
+
+const menuClose = function () {
+  toggleBurger();
+  bodyOverflow();
+  toggleMenu();
+}
+
+btnMenu?.addEventListener('click', function (e) {
+  e.stopPropagation();
+  toggleMenu();
+  toggleBurger();
+  bodyOverflow();
+});
+
+btnClose?.addEventListener('click', function (e) {
+  menuClose();
 });

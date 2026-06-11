@@ -2,23 +2,119 @@
 .modal {
   display: none;
   color: var(--main-color);
-  &-header {
-    padding: 45px;
-    padding-bottom: 25px;
-    border-bottom: none;
+  width: 460px;
+  padding: 40px 50px;
+  border-radius: 20px;
+  @media(max-width: 575px){
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 35px;
   }
 
-  &-body {
-    padding: 45px;
-    padding-top: 0;
+  h2 {
+    font-family: var(--font-family-second);
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 71%;
+    text-align: center;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+    @media(max-width: 575px){
+      font-size: 25px;
+      line-height: 100%;
+      margin-bottom: 10px;
+    }
   }
 
-  &-title {
-    font-size: 23px;
+  .inputW {
+    margin-bottom: 7px;
   }
-  .btn-close {
-    background: none;
-    opacity: 1;
+
+  .is-close-btn {
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      background-color: transparent;
+
+      svg {
+        stroke: var(--main-color);
+      }
+    }
+
+    svg {
+      stroke: var(--green);
+      stroke-width: 3px;
+      transition: stroke .2s linear;
+    }
   }
 }
 
+.cookie {
+  position: fixed;
+  padding: 40px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  width: 720px;
+  border-radius: 20px;
+  background: #fff;
+  margin: auto;
+  z-index: 2;
+
+  @media(max-width: 767px) {
+    width: calc(100% - 20px);
+    padding: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    @media(max-width: 767px) {
+      right: 6px;
+      top: 6px;
+    }
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+    &:hover {
+      svg {
+        stroke: var(--main-color);
+      }
+    }
+
+    svg {
+      stroke: var(--green);
+      width: 20px;
+      stroke-width: 2px;
+
+      @media(max-width: 767px) {
+        width: 16px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+}

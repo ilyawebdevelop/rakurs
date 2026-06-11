@@ -24,8 +24,24 @@
   .col {
     grid-column: 6 span;
   }
+
   .col-full {
     grid-column: 12 span;
+  }
+  &.grid-cols-2-lg-1 {
+    .col {
+      @media(max-width: 991px){
+        grid-column: 12 span;
+      }
+    }
+  }
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(12, 1fr);
+
+  .col {
+    grid-column: 4 span;
   }
 }
 
@@ -47,24 +63,54 @@
 
 .gap-14 {
   gap: 14px;
+  &.gap-lg-9 {
+    @media(max-width: 991px){
+      gap: 9px;
+    }
+  }
 }
 
 .gap-20 {
   gap: 20px;
+  &.gap-lg-10 {
+    @media(max-width: 991px){
+      gap: 10px;
+    }
+  }
 }
 
 .gap-25 {
   gap: 25px;
+
+  &.gap-xl-10 {
+    @media(max-width: 1199px) {
+      gap: 10px;
+    }
+  }
 }
 
 .gap-30 {
   gap: 30px;
+
+  &.gap-lg-15 {
+    @media(max-width: 991px) {
+      gap: 15px;
+    }
+  }
 }
+
 .gap-35 {
   gap: 35px;
 }
+
 .gap-60 {
   gap: 60px;
+
+  &.gap-lg-10 {
+    @media(max-width: 991px) {
+      gap: 10px;
+    }
+  }
 }
 
 .gap-95 {
@@ -93,4 +139,36 @@
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+.d-sm-none {
+  @media(max-width: 575px) {
+    display: none !important;
+  }
+}
+
+.d-xl-block {
+  display: none !important;
+
+  @media(max-width: 1199px) {
+    display: block !important;
+  }
+}
+
+.d-xl-none {
+  @media(max-width: 1199px) {
+    display: none !important;
+  }
+}
+
+.flex-xl-column {
+  @media(max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+
+.flex-lg-column {
+  @media(max-width: 991px) {
+    flex-direction: column;
+  }
 }

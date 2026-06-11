@@ -2,18 +2,26 @@
 .hamburger {
   align-self: center;
   flex-direction: column;
-  justify-content: space-between;
-  width: 18px;
-  height: 14px;
-  min-width: 15px;
-  margin-right: 0;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
   cursor: pointer;
   position: relative;
   // transition: background 0.2s linear;  
   display: none;
+  background-color: var(--green);
+  border-radius: 50%;
+  row-gap: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     display: flex;
+  }
+  @media(max-width: 370px){
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -21,8 +29,8 @@
   align-self: flex-start;
   height: 2px;
   width: 100%;
-  background: #222;
-  border-radius: 10px;
+  background: var(--milk);
+  border-radius: 5px;
 }
 
 .hamburger .meat {
@@ -34,4 +42,3 @@
 .bottom-bun.active {
   opacity: 0;
 }
-

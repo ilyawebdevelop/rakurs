@@ -8,9 +8,114 @@
       </a>
 
       <nav class="headerNav">
+        <div class="headerNavHead">
+          <a href="#" class="headerLogo logo">
+            <img src="@img/admin/logo/logo.svg" alt="logo">
+          </a>
+          <button class="headerNavMobileClose" id="headerNavMobileClose" type="button">
+            <img src="@img/icons/close.svg" alt="close">
+          </button>
+        </div>
         <ul>
           <li class="menu-item-has-children">
             <a href="#">Услуги</a>
+            <div class="headerServices">
+              <div class="headerServicesGrid">
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Профилактика</a>
+                  <ul>
+                    <li><a href="#">Отбеливание</a></li>
+                    <li><a href="#">Ультразвуковая чистка</a></li>
+                    <li><a href="#">Фторирование</a></li>
+                    <li><a href="#">Реминерализация</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Терапия</a>
+                  <ul>
+                    <li><a href="#">Консультация стоматолога</a></li>
+                    <li><a href="#">Лечение кариеса </a></li>
+                    <li><a href="#">Восстановление зубов</a></li>
+                    <li><a href="#">Реставрация зуба</a></li>
+                    <li><a href="#">Лечение корневых каналов</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Хирургия</a>
+                  <ul>
+                    <li><a href="#">Удаление любой сложности</a></li>
+                    <li><a href="#">Пластика слизистой</a></li>
+                    <li><a href="#">Удаление зуба мудрости</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Ортопедия</a>
+                  <ul>
+                    <li><a href="#">Керамические виниры</a></li>
+                    <li><a href="#">Коронки на имплант</a></li>
+                    <li><a href="#">Протезирование зубов</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Имплантация</a>
+                  <ul>
+                    <li><a href="#">Импланты All on 4/6</a></li>
+                    <li><a href="#">Синус лифтинг</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Ортодонтия</a>
+                  <ul>
+                    <li><a href="#">Консультация врача-ортодонта</a></li>
+                    <li><a href="#">Брекет-системы</a></li>
+                    <li><a href="#">Лечение на элайнерах</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Пародонтология</a>
+                  <ul>
+                    <li><a href="#">Консультация пародонтолога</a></li>
+                    <li><a href="#">Консультация пародонтолога</a></li>
+                    <li><a href="#">Лечение пародонтита</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Лечение во сне</a>
+                  <ul>
+                    <li><a href="#">Лечение под наркозом</a></li>
+                    <li><a href="#">Детское лечение во сне</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Диагностика</a>
+                  <ul>
+                    <li><a href="#">Компьютерная томография</a></li>
+                    <li><a href="#">Рентгенография</a></li>
+                    <li><a href="#">Ортопантомограмма</a></li>
+                  </ul>
+                </div>
+
+                <div class="headerServicesItem">
+                  <a href="#" class="headerServicesItemTitle">Детская стоматология</a>
+                  <ul>
+                    <li><a href="#">Консультация стоматолога</a></li>
+                    <li><a href="#">Лечение молочного зуба</a></li>
+                    <li><a href="#">Удаление молочного зуба</a></li>
+                    <li><a href="#">Лечение кариеса во сне</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
           </li>
           <li>
             <a href="#">О клинике</a>
@@ -28,10 +133,36 @@
             <a href="#">Контакты</a>
           </li>
         </ul>
+        <a href="tel:+79999999999" class="headerPhone d-xl-block">+7 999 999 99 99</a>
+        <div class="d-flex align-items-center justify-content-between gap-30">
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img src="@img/admin/socials/wh.svg" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img src="@img/admin/socials/tg.svg" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img src="@img/admin/socials/max.svg" alt="icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="button button--sm rounded-10 button--black fz-12 d-xl-block" data-fancybox
+            data-src="#modalOrder">
+            Записаться
+          </button>
+        </div>
       </nav>
 
       <div class="headerContacts">
-        <a href="tel:+79999999999" class="headerPhone">+7 999 999 99 99</a>
+        <a href="tel:+79999999999" class="headerPhone d-sm-none">+7 999 999 99 99</a>
         <div class="socials">
           <ul>
             <li>
@@ -51,11 +182,17 @@
             </li>
           </ul>
         </div>
-        <button class="button button--sm rounded-10 button--black fz-12">
+        <button class="button button--sm rounded-10 button--black fz-12 d-xl-none" data-fancybox data-src="#modalOrder">
           Записаться
         </button>
+        <div class="hamburger" id="toggle">
+          <div class="top-bun"></div>
+          <div class="meat"></div>
+          <div class="bottom-bun"></div>
+        </div><!-- /Hamburger Menu -->
       </div>
 
     </div>
+
   </div>
 </header>

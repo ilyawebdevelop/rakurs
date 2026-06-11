@@ -4,11 +4,13 @@
   border-radius: 20px;
   padding: 20px;
   height: auto;
+
   &Title {
     line-height: 105%;
   }
+
   &Img {
-    display: block;  
+    display: block;
     width: 100%;
     height: 240px;
     object-fit: cover;
@@ -18,11 +20,52 @@
   strong {
     font-weight: 500;
   }
+
   &>a {
     display: block;
     margin-bottom: 10px;
+
     &:hover {
       opacity: .85;
     }
   }
+}
+
+.portfolioGrid {
+  column-gap: 22px;
+  row-gap: 30px;
+}
+
+.portfolioCard {
+  border: 1px solid #a1ad92;
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%;
+
+  &Img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  &Spec {
+    border: 1px solid rgba(161, 173, 146, 0.7);
+    border-radius: 15px;
+    padding: 12px 20px;
+    width: fit-content;
+    display: flex;
+    gap: 5px;
+  }
+}
+.portfolioCardSpecWork {
+  color: #5C5C5C;
+  line-height: normal;
+}
+.portfolioCardSpecImg {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
 }
