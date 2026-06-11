@@ -1983,6 +1983,7 @@ html.with-fancybox body.hide-scrollbar {
   --outline: #e3ebf2;
   --green: #a1ad92;
   --milk: #f4f1e4;
+  --obvodka-dlya-plashek-i-knopok: rgba(255, 255, 255, 0.4);
   --main-color: #2d2d2d;
   --black: #333;
   --background: #f3f7fd;
@@ -2464,7 +2465,8 @@ h2,
 @media (max-width: 1199px) {
   h2,
 .h2 {
-    font-size: 20px;
+    font-size: 28px;
+    line-height: 125%;
   }
 }
 h2.h2--sm,
@@ -2518,6 +2520,12 @@ h3,
   width: 520px;
 }
 
+@media (max-width: 991px) {
+  .w-lg-100 {
+    width: 100%;
+  }
+}
+
 .h-370 {
   height: 370px;
 }
@@ -2532,6 +2540,12 @@ h3,
 
 .h-640 {
   height: 640px;
+}
+
+@media (max-width: 575px) {
+  .h-sm-230 {
+    height: 230px;
+  }
 }
 
 .min-h-560 {
@@ -2693,6 +2707,17 @@ h3,
   line-height: 116%;
 }
 
+@media (max-width: 991px) {
+  .fz-lg-16 {
+    font-size: 16px;
+    line-height: 125%;
+  }
+}
+
+.rounded-12 {
+  border-radius: 12px;
+}
+
 .rounded-15 {
   border-radius: 15px;
 }
@@ -2778,6 +2803,14 @@ a.color--milk:hover {
 
 .p-40 {
   padding: 40px;
+}
+@media (max-width: 991px) {
+  .p-40.p-lg-32-20 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .py-3 {
@@ -2898,6 +2931,11 @@ a.color--milk:hover {
 .mb-20 {
   margin-bottom: 20px;
 }
+@media (max-width: 1199px) {
+  .mb-20.mb-xl-10 {
+    margin-bottom: 10px;
+  }
+}
 
 .mb-24 {
   margin-bottom: 24px;
@@ -2914,6 +2952,11 @@ a.color--milk:hover {
 
 .mb-30 {
   margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  .mb-30.mb-lg-25 {
+    margin-bottom: 25px;
+  }
 }
 @media (max-width: 991px) {
   .mb-30.mb-lg-20 {
@@ -2967,6 +3010,18 @@ a.color--milk:hover {
 
 .mb-130 {
   margin-bottom: 130px;
+}
+
+@media (max-width: 991px) {
+  .mb-lg-0 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .mb-xl-0 {
+    margin-bottom: 0;
+  }
 }
 
 .ml-5 {
@@ -3044,6 +3099,12 @@ a.color--milk:hover {
 
 .max-w-830 {
   max-width: 830px;
+}
+
+@media (max-width: 1199px) {
+  .max-w-xl-100 {
+    max-width: 100%;
+  }
 }
 
 .text-center {
@@ -3135,7 +3196,7 @@ a.color--milk:hover {
 }
 
 .border-green-card {
-  border: 1px solid #D9DED3;
+  border: 1px solid var(--obvodka-dlya-plashek-i-knopok);
 }
 
 .text-nowrap {
@@ -3393,6 +3454,21 @@ a.color--milk:hover {
 .gap-95 {
   gap: 95px;
 }
+@media (max-width: 1400px) {
+  .gap-95.gap-xxl-40 {
+    gap: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .gap-95.gap-lg-20 {
+    gap: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .gap-95.gap-lg-5 {
+    gap: 5px;
+  }
+}
 
 .justify-content-center {
   justify-content: center;
@@ -3421,6 +3497,21 @@ a.color--milk:hover {
 @media (max-width: 575px) {
   .d-sm-none {
     display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .d-lg-none {
+    display: none;
+  }
+}
+
+.d-lg-block {
+  display: none;
+}
+@media (max-width: 991px) {
+  .d-lg-block {
+    display: block;
   }
 }
 
@@ -3776,7 +3867,7 @@ a.color--milk:hover {
 }
 @media (max-width: 767px) {
   .cookie {
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     padding: 20px;
   }
 }
@@ -3838,7 +3929,6 @@ a.color--milk:hover {
   padding-right: 10px;
   background: rgba(161, 173, 146, 0.4);
   transition: color 0.2s linear, background-color 0.2s linear;
-  border: 1px solid #D9DED3;
 }
 .tabs__nav-btn:hover {
   background-color: #a1ad92;
@@ -4181,7 +4271,7 @@ a.color--milk:hover {
 }
 .introServSlide {
   background: rgba(161, 173, 146, 0.4);
-  border: 1px solid var(--milk);
+  border: 1px solid var(--obvodka-dlya-plashek-i-knopok);
 }
 @media (max-width: 991px) {
   .introServSlideTitle {

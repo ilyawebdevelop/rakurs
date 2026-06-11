@@ -115,6 +115,21 @@
 
 .gap-95 {
   gap: 95px;
+  &.gap-xxl-40 {
+    @media(max-width: 1400px){
+      gap: 40px;
+    }
+  }
+  &.gap-lg-20 {
+    @media(max-width: 991px){
+      gap: 20px;
+    }
+  }
+  &.gap-lg-5 {
+    @media(max-width: 991px){
+      gap: 5px;
+    }
+  }
 }
 
 .justify-content-center {
@@ -146,7 +161,17 @@
     display: none !important;
   }
 }
-
+.d-lg-none {
+  @media(max-width: 991px){
+    display: none;
+  }
+}
+.d-lg-block {
+  display: none;
+  @media(max-width: 991px){
+    display: block;
+  }
+}
 .d-xl-block {
   display: none !important;
 
