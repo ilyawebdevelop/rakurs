@@ -1,11 +1,24 @@
 .adv {
+  &Slider {
+    @media(max-width: 575px){
+      padding-right: 35px;
+      overflow: visible;
+    }
+  }
   &Card {
+    height: 100%;
     &Icon {
       width: 48px;
       height: 48px;
       border: 1px solid #f4f1e4;
       border-radius: 15px;
       padding: 10px;
+      @media(max-width: 1199px){
+        width: 39px;
+        height: 39px;
+        border-radius: 8px;
+        padding: 8px;
+      }    
       &--border-none {
         border: 1px solid transparent;        
       }
@@ -16,5 +29,8 @@
     &.min-h-300 {
       min-height: 300px;
     }
+  }
+  .swiper-slide {
+    height: auto;
   }
 }

@@ -2,7 +2,10 @@
   .tabs__nav {
     max-width: 435px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
+    @media(max-width: 767px){
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -12,6 +15,9 @@
 
 .servMainSlider {
   overflow: visible;
+  @media(max-width: 575px){
+    padding-right: 30px;
+  }
 }
 
 .servMainSlide {
@@ -28,15 +34,25 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
+  @media(max-width: 991px){
+    justify-content: flex-end;
+    row-gap: 10px;
+  }
 
   &:hover {
     width: 330px;
     justify-content: space-between;
+    @media(max-width: 991px){
+      justify-content: flex-end;
+    }
 
     .servMainSlideB {
       display: flex;
       -webkit-animation: shows 0.2s;
       animation: shows 0.2s;
+      @media(max-width: 991px){
+        animation: none;
+      }
     }
 
     .servMainSlideTitle-visible {
@@ -49,6 +65,9 @@
       animation: shows 0.2s;
       margin-right: auto;
       margin-top: 70px;
+      @media(max-width: 991px){
+        animation: none;
+      }
     }
   }
 
@@ -70,6 +89,12 @@
 
 .servMainSlideTitle.hover-visible {
   display: none;
+  @media(max-width: 991px){
+    display: block;
+    text-align: start;
+    margin-top: 70px;
+    margin-right: auto;
+  }
 }
 
 .servMainSlideTitle {
@@ -83,6 +108,11 @@
   position: relative;
   z-index: 1;
   font-family: var(--font-family-second);
+  @media(max-width: 991px){
+    display: none;
+    font-size: 18px;
+    line-height: 117%;
+  }
 
   &.hover-visible {
     transform: none;
@@ -93,6 +123,9 @@
 .servMainSlideB {
   display: none;
   column-gap: 20px;
+  @media(max-width: 991px){
+    display: flex;
+  }
 }
 
 .servMainSlideDescr {

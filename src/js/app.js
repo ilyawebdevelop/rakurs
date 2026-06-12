@@ -34,7 +34,35 @@ var mySwiperIntroServ = new Swiper(introServSlider, {
   },
 });
 
-// Инициализация слайдера productSlider
+// Инициализация слайдера advSlider
+document.querySelectorAll('.advSlider').forEach(n => {
+  const mySwiperAdv = new Swiper(n, {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    speed: 600,
+    autoplay: false,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+});
+
+// Инициализация слайдера servMainSlider
 document.querySelectorAll('.servMainSlider').forEach(n => {
   const mySwiperServicesSlider = new Swiper(n, {
     slidesPerView: 'auto',
@@ -46,21 +74,22 @@ document.querySelectorAll('.servMainSlider').forEach(n => {
       nextEl: n.closest('.sliderW').querySelector('.navArrowNext'),
     },
     breakpoints: {
-      // 0: {
-      //   slidesPerView: 2,
-      //   spaceBetween: 10,
-      // },
-      // 992: {
-      //   slidesPerView: 3,
-      //   spaceBetween: 10,
-      // },
-      // 1200: {
-      //   slidesPerView: 4,
-      //   spaceBetween: 15,
-      // },
-      // 1400: {
-      //   spaceBetween: 27,
-      // },
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1200: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
     },
   });
 });

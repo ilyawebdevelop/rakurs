@@ -538,7 +538,12 @@ h3,
     line-height: 125%;
   }
 }
-
+.fz-xl-18 {
+  @media(max-width: 1199px){
+    font-size: 18px;
+    line-height: 117%;
+  }
+}
 .rounded-12 {
   border-radius: 12px;
 }
@@ -817,6 +822,11 @@ a.color--milk {
 
 .mb-40 {
   margin-bottom: 40px;
+  &.mb-xl-35 {
+    @media(max-width: 1199px){
+      margin-bottom: 35px;
+    }
+  }
 }
 
 .mb-45 {
@@ -958,6 +968,11 @@ a.color--milk {
 
 .text-end {
   text-align: end;
+}
+.text-md-start {
+  @media(max-width: 767px){
+    text-align: start;
+  }
 }
 
 .people-round {

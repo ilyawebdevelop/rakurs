@@ -218,7 +218,7 @@
   height: 48px;
 
   &.bg--green {
-    background-color: var(--green);
+    background: rgba(161, 173, 146, 0.4);
 
     svg {
       fill: #fff;
@@ -231,6 +231,9 @@
     &:hover {
       background-color: #fff;
     }
+  }
+  &.border-green {
+    border: 1px solid var(--obvodka-dlya-plashek-i-knopok);
   }
 
 }
