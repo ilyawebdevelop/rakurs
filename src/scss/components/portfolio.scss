@@ -4,6 +4,7 @@
   border-radius: 20px;
   padding: 20px;
   height: auto;
+  border: 1px solid var(--obvodka-dlya-plashek-i-knopok);
 
   &Title {
     line-height: 105%;
@@ -15,6 +16,9 @@
     height: 240px;
     object-fit: cover;
     border-radius: 10px;
+    @media(max-width: 575px){
+      height: 160px;
+    }
   }
 
   strong {

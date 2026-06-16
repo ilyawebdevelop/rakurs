@@ -9,6 +9,11 @@
   column-gap: 6px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+
+  @media(max-width: 1199px) {
+    font-size: 12px;
+    line-height: normal;
+  }
 }
 
 .aioseo-breadcrumbs a {

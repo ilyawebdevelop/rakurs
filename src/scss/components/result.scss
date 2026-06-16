@@ -1,4 +1,9 @@
 .result {
+  &Slider {
+    @media(max-width: 991px){
+      overflow: visible;
+    }
+  }
   &Slide {
     transition: opacity .2s linear;
 
@@ -11,6 +16,18 @@
       width: 100%;
       object-fit: cover;
       border-radius: 25px;
+
+      @media(max-width: 1199px) {
+        height: 300px;
+      }
+
+      @media(max-width: 991px) {
+        height: 180px;
+        border-radius: 12px;
+      }
+      @media(max-width: 575px){
+        height: 200px;
+      }
     }
   }
 }
@@ -29,5 +46,20 @@
     height: 130px;
     border-radius: 15px;
     object-fit: cover;
+
+    @media(max-width: 991px) {
+      height: 180px;
+      border-radius: 12px;
+    }
+
+    @media(max-width: 575px) {
+      height: 200px;
+    }
+  }
+}
+
+.resultThumbSlider {
+  @media(max-width: 575px) {
+    overflow: visible;
   }
 }

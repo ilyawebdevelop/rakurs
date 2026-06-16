@@ -62,6 +62,10 @@ document.querySelectorAll('.advSlider').forEach(n => {
   });
 });
 
+
+
+
+
 // Инициализация слайдера servMainSlider
 document.querySelectorAll('.servMainSlider').forEach(n => {
   const mySwiperServicesSlider = new Swiper(n, {
@@ -109,6 +113,24 @@ var mySwiperTeam = new Swiper(teamSlider, {
     delay: 4000,
     disableOnInteraction: false, // Не останавливать после клика
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 12,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    1200: {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+    },
+  },
 });
 
 // Инициализация слайдера resultSlider
@@ -118,6 +140,24 @@ document.querySelectorAll('.resultSlider').forEach(n => {
     spaceBetween: 0,
     speed: 600,
     // autoplay: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    },
     thumbs: { // указываем на превью слайдер
       swiper: {
         el: n.closest('.sliderW').querySelector('.resultThumbSlider'),
@@ -162,6 +202,20 @@ var mySwiperCert = new Swiper(certSlider, {
     prevEl: certSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
     nextEl: certSlider?.closest('.sliderW').querySelector('.navArrowNext'),
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+  },
 });
 
 // Инициализация слайдера portfolioSlider
@@ -179,6 +233,20 @@ var mySwiperPortfolio = new Swiper(portfolioSlider, {
     prevEl: portfolioSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
     nextEl: portfolioSlider?.closest('.sliderW').querySelector('.navArrowNext'),
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 12,
+    },
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
 });
 
 // Инициализация слайдера reviewsSlider
@@ -195,6 +263,20 @@ var mySwiperReviews = new Swiper(reviewsSlider, {
   navigation: {
     prevEl: reviewsSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
     nextEl: reviewsSlider?.closest('.sliderW').querySelector('.navArrowNext'),
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
   },
 });
 
@@ -310,6 +392,36 @@ if (mediaQueryMax1199.matches) {
     event.preventDefault();
     jQuery(this).toggleClass('active');
     jQuery(this).siblings('.headerServices').slideToggle();
+  });
+}
+
+if (mediaQueryMax1199.matches) {
+  // Инициализация слайдера trustSlider
+  document.querySelectorAll('.trustSlider').forEach(n => {
+    const mySwiperTrust = new Swiper(n, {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      speed: 600,
+      autoplay: false,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
   });
 }
 

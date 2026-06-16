@@ -10,9 +10,6 @@
   }
 
   &Slide {
-    height: 400px;
-    border-radius: 20px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,6 +18,14 @@
     background-size: cover;
     width: 330px;
     overflow: hidden;
+
+    @media(max-width: 767px) {
+      height: fit-content;
+    }
+
+    @media(max-width: 575px) {
+      width: auto;
+    }
 
     &::before {
       content: '';
@@ -36,10 +41,18 @@
       display: flex;
       justify-content: space-between;
       column-gap: 10px;
+      row-gap: 10px;
+      flex-wrap: wrap;
+      position: absolute;
+      width: calc(100% - 20px);
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: fit-content;
     }
 
     &Exp {
-
       background: rgba(161, 173, 146, 0.4);
       border-radius: 20px;
       padding: 5px 10px;
@@ -50,6 +63,7 @@
       color: #fff;
       position: relative;
       z-index: 1;
+
       &--green {
         background: #a1ad92;
         border: 1px solid #a1ad92;
@@ -65,16 +79,28 @@
       background: rgba(161, 173, 146, 0.4);
       border-radius: 20px;
       padding: 12px 20px;
-      border: 1px solid var(--milk);
+      border: 1px solid var(--obvodka-dlya-plashek-i-knopok);
       position: relative;
       z-index: 1;
       backdrop-filter: blur(3px);
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+
+      @media(max-width: 991px) {
+        border-radius: 12px;
+      }
+
+      @media(max-width: 767px) {
+        position: unset;
+        margin-top: 5px;
+      }
     }
 
     &Title {
       font-size: 15px;
       line-height: 115%;
-
     }
 
     &Work {
@@ -83,8 +109,24 @@
       color: #f4f1e4;
       max-width: 160px;
     }
+
+    &Img {
+      width: 100%;
+      object-fit: cover;
+      height: 400px;
+      border-radius: 20px;
+
+      @media(max-width: 767px) {
+        height: 350px;
+      }
+
+      @media(max-width: 575px) {
+        height: 350px;
+      }
+    }
   }
 }
+
 .d-grid {
   .teamSlide {
     width: 100%;

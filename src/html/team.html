@@ -1,22 +1,22 @@
 <section class="team sect pt-0 sliderW">
   <div class="container">
-    <div class="p-30 bg--black rounded-35 overflow-hidden">
+    <div class="p-30 px-lg-20 bg--black rounded-35 rounded-xl-22 overflow-hidden">
 
-      <div class="mb-30 d-flex justify-content-between gap-25">
+      <div class="mb-30 mb-lg-20 d-flex justify-content-between gap-25">
         <h2 class="h2 text-uppercase max-w-605 color--white">
           Врачи, которым можно <span>доверить</span> здоровье
         </h2>
-        <p class="max-w-475 fz-16 text-end color--white">
+        <p class="max-w-475 fz-16 text-end color--white d-lg-none">
           Мы собираем команду врачей, которые не работают «по шаблону».
           Каждое лечение — это взвешенное решение, где важно не сделать лишнего и сохранить результат на годы.
         </p>
       </div>
 
-      <div class="mb-30 d-flex align-items-center justify-content-between gap-25">
+      <div class="mb-30 mb-lg-20 d-flex align-items-center justify-content-between gap-25">
         <div class="color--white max-w-480">
           Каждый специалист работает по принципу — лечить честно и сохранять максимум
         </div>
-        <div class="navArrowW d-flex gap-5">
+        <div class="navArrowW d-flex gap-5 d-lg-none">
           <button class="navArrow navArrow--green navArrowPrev">
             <svg>
               <use xlink:href="img/icons/icons.svg#slider-prev"></use>
@@ -32,16 +32,19 @@
 
       <div class="swiper teamSlider mb-25">
         <div class="swiper-wrapper">
-
+          @@include('team/card-1.html',{})
+          @@include('team/card-2.html',{})
           @@include('team/card-1.html',{})
           @@include('team/card-1.html',{})
-          @@include('team/card-1.html',{})
-          @@include('team/card-1.html',{})
- 
         </div>
       </div>
 
-      <a href="#" class="button button--black-border-white ml-auto">
+      <p class="fz-16 color--white d-lg-block mb-20">
+        Мы собираем команду врачей, которые не работают «по шаблону».
+        Каждое лечение — это взвешенное решение, где важно не сделать лишнего и сохранить результат на годы.
+      </p>
+
+      <a href="#" class="button button--black-border-white ml-auto ml-lg-unset w-sm-100">
         Смотреть всех врачей
         <svg style="width: 29px; height: 29px;">
           <use xlink:href="img/icons/icons.svg#arrow-btn"></use>

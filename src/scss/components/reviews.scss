@@ -1,5 +1,8 @@
 .reviewsLogo {
   width: 335px;
+  @media(max-width: 575px){
+    width: 230px;
+  }
 }
 
 .reviews-mark {
@@ -9,11 +12,18 @@
 .reviews-stars-icon {
   width: 115px;
 }
-
+.reviewsSlider {
+  @media(max-width: 575px){
+    overflow: visible;
+  }
+}
 .reviewsSlide {
   border-radius: 25px;
   padding: 35px 25px 30px;
   background: #fff;
+  @media(max-width: 991px){
+    padding: 30px 20px;
+  }
   &Title {
     font-weight: 500;
     margin-bottom: 10px;

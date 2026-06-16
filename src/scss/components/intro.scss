@@ -40,13 +40,33 @@
 
   .breadcrumbs {
     margin-bottom: 100px;
+    @media(max-width: 1400px){
+      margin-bottom: 50px;
+    }
+    @media(max-width: 1199px){
+      margin-bottom: 30px;
+    }
 
     &.mb-40 {
       margin-bottom: 40px;
+      @media(max-width: 991px){
+        margin-bottom: 20px;
+      }
     }
   }
 }
 
 .introAdvItem {
   background: rgba(244, 241, 228, 0.4);
+}
+.introAboutImg {
+  @media(max-width: 1199px){
+   height: 600px; 
+  }
+  @media(max-width: 767px){
+    height: 500px;
+  }
+  @media(max-width: 575px){
+    height: 330px;
+  }
 }
