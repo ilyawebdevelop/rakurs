@@ -3,9 +3,12 @@
     background: rgba(161, 173, 146, 0.4);
     border-radius: 20px;
     color: #fff;
-    padding: 25px 10px 25px 20px;
+    padding: 25px 25px 25px 20px;
     height: 100%;
-    border: 1px solid var(--milk);
+    border: 1px solid var(--obvodka-dlya-plashek-i-knopok);
+    @media(max-width: 991px){
+      border-radius: 15px;
+    }
     &Title {
       font-size: 18px;
       font-weight: 500;
