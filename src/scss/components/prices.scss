@@ -2,6 +2,9 @@
   &Nav {
     ul {
       justify-content: flex-end;
+      @media(max-width: 991px){
+        justify-content: flex-start;
+      }
     }
   }
 }

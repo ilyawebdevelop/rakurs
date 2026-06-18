@@ -105,7 +105,11 @@ section {
 .fw-bold {
   font-weight: 700;
 }
-
+.fw-lg-medium {
+  @media(max-width: 991px){
+    font-weight: 500!important;
+  }
+}
 .sectHead {
   margin-bottom: 30px;
 
@@ -265,6 +269,9 @@ h1,
     font-size: 20px;
     font-weight: 600;
     line-height: 145%;
+    @media(max-width: 991px){
+      font-size: 18px;
+    }
   }
 }
 
@@ -488,9 +495,15 @@ h3,
     font-weight: 500;
     font-family: var(--font-family);
     margin-bottom: 20px;
+    @media(max-width: 991px){
+      margin-bottom: 10px;
+    }
 
     &:not(:first-child) {
       margin-top: 20px;
+      @media(max-width: 991px){
+        margin-top: 10px;
+      }
     }
   }
 
@@ -872,6 +885,11 @@ a.color--milk {
     padding-top: 20px;
   }
 }
+.pt-lg-15 {
+  @media(max-width: 991px){
+    padding-top: 15px;
+  }
+}
 
 .pb-30 {
   padding-bottom: 30px;
@@ -1055,7 +1073,11 @@ a.color--milk {
 
 .mb-40 {
   margin-bottom: 40px;
-
+  &.mb-xl-30 {
+    @media(max-width: 1199px){
+      margin-bottom: 30px;
+    }
+  }
   &.mb-xl-35 {
     @media(max-width: 1199px) {
       margin-bottom: 35px;

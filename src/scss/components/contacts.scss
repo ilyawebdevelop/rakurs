@@ -57,7 +57,14 @@
 }
 .contactsPageImg {
   width: 100%;
-  height: 505px;
+  min-height: 505px;
   object-fit: cover;
   border-radius: 22px;
+  @media(max-width: 1199px){
+    min-height: 400px;
+  }
+  @media(max-width: 991px){
+    min-height: unset;
+    border-radius: 12px;
+  }
 }

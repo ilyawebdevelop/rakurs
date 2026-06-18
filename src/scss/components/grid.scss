@@ -83,7 +83,13 @@
     }
   }
 }
-
+.grid-cols-md-1 {
+  .col {
+    @media(max-width: 767px){
+      grid-column: 12 span;
+    }
+  }
+}
 .grid-cols-sm-1 {
   .col {
     @media(max-width: 575px) {

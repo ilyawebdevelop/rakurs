@@ -2280,6 +2280,12 @@ section {
   font-weight: 700;
 }
 
+@media (max-width: 991px) {
+  .fw-lg-medium {
+    font-weight: 500 !important;
+  }
+}
+
 .sectHead {
   margin-bottom: 30px;
 }
@@ -2460,6 +2466,12 @@ h1.h1--content,
   font-size: 20px;
   font-weight: 600;
   line-height: 145%;
+}
+@media (max-width: 991px) {
+  h1.h1--content,
+.h1.h1--content {
+    font-size: 18px;
+  }
 }
 
 h2,
@@ -2686,8 +2698,18 @@ h3,
   font-family: var(--font-family);
   margin-bottom: 20px;
 }
+@media (max-width: 991px) {
+  .content-page h2 {
+    margin-bottom: 10px;
+  }
+}
 .content-page h2:not(:first-child) {
   margin-top: 20px;
+}
+@media (max-width: 991px) {
+  .content-page h2:not(:first-child) {
+    margin-top: 10px;
+  }
 }
 .content-page strong {
   font-weight: 500;
@@ -3032,6 +3054,12 @@ a.color--milk:hover {
   }
 }
 
+@media (max-width: 991px) {
+  .pt-lg-15 {
+    padding-top: 15px;
+  }
+}
+
 .pb-30 {
   padding-bottom: 30px;
 }
@@ -3200,6 +3228,11 @@ a.color--milk:hover {
 
 .mb-40 {
   margin-bottom: 40px;
+}
+@media (max-width: 1199px) {
+  .mb-40.mb-xl-30 {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 1199px) {
   .mb-40.mb-xl-35 {
@@ -3747,6 +3780,12 @@ a.color--milk:hover {
 @media (max-width: 991px) {
   .grid-cols-lg-2 .col {
     grid-column: 6 span;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-cols-md-1 .col {
+    grid-column: 12 span;
   }
 }
 
@@ -5252,9 +5291,20 @@ a.color--milk:hover {
 
 .contactsPageImg {
   width: 100%;
-  height: 505px;
+  min-height: 505px;
   object-fit: cover;
   border-radius: 22px;
+}
+@media (max-width: 1199px) {
+  .contactsPageImg {
+    min-height: 400px;
+  }
+}
+@media (max-width: 991px) {
+  .contactsPageImg {
+    min-height: unset;
+    border-radius: 12px;
+  }
 }
 
 .galSlide {
@@ -5516,6 +5566,11 @@ a.color--milk:hover {
 
 .pricesNav ul {
   justify-content: flex-end;
+}
+@media (max-width: 991px) {
+  .pricesNav ul {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 575px) {
